@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Preetika ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* PAGE FADE */
+body {
+  opacity: 0;
+  animation: fadePage 1.5s ease forwards;
+}
+
+@keyframes fadePage {
+  to { opacity: 1; }
+}
+
+/* BACKGROUND COLLAGE */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 25vh;
+  gap: 6px;
+  z-index: -3;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* CLEAR + CINEMATIC */
+  filter: brightness(0.95) contrast(1.05);
+
+  border-radius: 8px;
+
+  animation: zoomFloat 18s ease-in-out infinite alternate;
+}
+
+.background img:nth-child(odd) {
+  animation-duration: 20s;
+}
+
+.background img:nth-child(even) {
+  animation-duration: 16s;
+}
+
+/* COLLAGE SHAPES */
+.background img:nth-child(1){ grid-column: span 2; grid-row: span 2; }
+.background img:nth-child(4){ grid-column: span 2; }
+.background img:nth-child(7){ grid-row: span 2; }
+.background img:nth-child(9){ grid-column: span 2; }
+
+/* ANIMATION */
+@keyframes zoomFloat {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+
+/* OVERLAY FOR READABILITY */
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: -2;
+}
+
+/* CENTER */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  width: 650px;
+  max-width: 92%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* GLASS BOX */
+.box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 35px;
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 30px rgba(255,100,150,0.25);
+}
+
+/* TITLE */
+.title {
+  font-size: 2.4rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+/* COUNTDOWN */
+.countdown {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.time-box {
+  flex: 1;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.time-box span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg, #ff4d6d, #ff7eb3);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255,100,150,0.6);
+}
+
+/* MESSAGE */
+.message {
+  margin-top: 15px;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* ❤️ HEARTS (SUBTLE) */
+.hearts span {
+  position: fixed;
+  bottom: -30px;
+  opacity: 0.5;
+  animation: floatUp linear infinite;
+}
+
+/* DIFFERENT SIZES */
+.hearts span:nth-child(1){ left:10%; font-size:18px; animation-duration:12s;}
+.hearts span:nth-child(2){ left:20%; font-size:22px; animation-duration:14s;}
+.hearts span:nth-child(3){ left:30%; font-size:16px; animation-duration:11s;}
+.hearts span:nth-child(4){ left:40%; font-size:20px; animation-duration:13s;}
+.hearts span:nth-child(5){ left:50%; font-size:24px; animation-duration:15s;}
+.hearts span:nth-child(6){ left:60%; font-size:18px; animation-duration:12s;}
+.hearts span:nth-child(7){ left:70%; font-size:22px; animation-duration:14s;}
+.hearts span:nth-child(8){ left:80%; font-size:16px; animation-duration:11s;}
+.hearts span:nth-child(9){ left:90%; font-size:20px; animation-duration:13s;}
+
+@keyframes floatUp {
+  0% { bottom:-30px; transform: translateX(0);}
+  100% { bottom:110%; transform: translateX(25px);}
+}
+
+/* 🌸 FLOWERS (MORE + DEPTH) */
+.flowers {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  top: -10%;
+  background: radial-gradient(circle, #ffb6d9, #ff4d88);
+  border-radius: 50% 50% 50% 0;
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+
+/* VARIATION */
+.flower:nth-child(1){ left:5%; width:10px; height:14px; animation-duration:12s;}
+.flower:nth-child(2){ left:15%; width:14px; height:20px; animation-duration:14s;}
+.flower:nth-child(3){ left:25%; width:8px; height:12px; animation-duration:11s;}
+.flower:nth-child(4){ left:35%; width:12px; height:18px; animation-duration:15s;}
+.flower:nth-child(5){ left:45%; width:10px; height:14px; animation-duration:13s;}
+.flower:nth-child(6){ left:55%; width:14px; height:20px; animation-duration:16s;}
+.flower:nth-child(7){ left:65%; width:8px; height:12px; animation-duration:12s;}
+.flower:nth-child(8){ left:75%; width:12px; height:18px; animation-duration:14s;}
+.flower:nth-child(9){ left:85%; width:10px; height:14px; animation-duration:13s;}
+.flower:nth-child(10){ left:20%; width:14px; height:20px; animation-duration:15s;}
+.flower:nth-child(11){ left:50%; width:8px; height:12px; animation-duration:11s;}
+.flower:nth-child(12){ left:80%; width:12px; height:18px; animation-duration:16s;}
+
+@keyframes fall {
+  0% { top:-10%; transform: translateX(0) rotate(0deg);}
+  100% { top:110%; transform: translateX(30px) rotate(360deg);}
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .title { font-size: 2rem; }
+  .countdown { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+
+  .background {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 25vh;
+  }
+
+  .background img:nth-child(1),
+  .background img:nth-child(4),
+  .background img:nth-child(7),
+  .background img:nth-child(9) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .container {
+    width: 95%;
+    gap: 15px;
+  }
+
+  .box {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .time-box {
+    flex: 48%;
+    padding: 8px;
+  }
+
+  .time-box span {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+
+  .hearts span {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="background">
+  <img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg">
+  <img src="img4.jpg"><img src="img5.jpg"><img src="img6.jpg">
+  <img src="img7.jpg"><img src="img8.jpg"><img src="img9.jpg">
+</div>
+
+<!-- HEARTS -->
+<div class="hearts">
+  <span>❤️</span><span>❤️</span><span>❤️</span>
+</div>
+
+<!-- FLOWERS -->
+<div class="flowers">
+  <div class="flower"></div><div class="flower"></div><div class="flower"></div>
+  <div class="flower"></div><div class="flower"></div><div class="flower"></div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="box">
+    <h1 class="title">Happy Birthday to My Favorite Human ❤️</h1>
+  </div>
+
+  <div class="box">
+
+    <div class="countdown">
+      <div class="time-box"><span id="days">0</span><p>Days</p></div>
+      <div class="time-box"><span id="hours">0</span><p>Hours</p></div>
+      <div class="time-box"><span id="minutes">0</span><p>Minutes</p></div>
+      <div class="time-box"><span id="seconds">0</span><p>Seconds</p></div>
+    </div>
+
+    <button onclick="showMessage()">Open Message ❤️</button>
+
+    <div id="message" class="message">
+  Happy Birthday meri thodi si narazgi wali jaan ❤️😏<br><br>
+
+  Tumhari narazgi bhi mujhe pyaari lagti hai,<br>
+  Kyunki usme bhi tumhara haq sa lagta hai ❤️<br><br>
+
+  Tum muskurati raho bas yahi dua hai meri,<br>
+  Tumhari har khushi mein hi khushi hai meri ✨<br><br>
+
+  Main hoon na… har mood ke saath 😌❤️
+</div>
+
+  </div>
+
+</div>
+
+<script>
+const birthday = new Date("May 12, 2026 00:00:00").getTime();
+
+setInterval(function () {
+  const now = new Date().getTime();
+  const distance = birthday - now;
+
+  if (distance < 0) {
+    document.querySelector(".countdown").innerHTML = "🎉 It's Your Day ❤️";
+    return;
+  }
+
+  document.getElementById("days").innerHTML =
+    Math.floor(distance/(1000*60*60*24));
+
+  document.getElementById("hours").innerHTML =
+    Math.floor((distance/(1000*60*60))%24);
+
+  document.getElementById("minutes").innerHTML =
+    Math.floor((distance/(1000*60))%60);
+
+  document.getElementById("seconds").innerHTML =
+    Math.floor((distance/1000)%60);
+
+},1000);
+
+function showMessage(){
+  document.getElementById("message").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
